@@ -1,0 +1,356 @@
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>grafiki komputerowe</title>
+  </head>
+  <style>
+    #header {
+      position: sticky;
+      top: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0px;
+      padding: 0px;
+      height: 200%;
+    }
+
+    #tytul {
+      text-align: left;
+      margin-left: 35px;
+      font-weight: bold;
+      font-size: 30px;
+      color: black;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    #naglowek {
+      height: 80px;
+      background: hsla(226, 29%, 83%, 1);
+      background: linear-gradient(
+        45deg,
+        hsla(226, 29%, 83%, 1) 0%,
+        hsla(229, 100%, 85%, 1) 100%
+      );
+      background: -moz-linear-gradient(
+        45deg,
+        hsla(226, 29%, 83%, 1) 0%,
+        hsla(229, 100%, 85%, 1) 100%
+      );
+      background: -webkit-linear-gradient(
+        45deg,
+        hsla(226, 29%, 83%, 1) 0%,
+        hsla(229, 100%, 85%, 1) 100%
+      );
+      filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#C7CDE0", endColorstr="#B1BFFF", GradientType=1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    #navbar {
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    #navbar ul {
+      list-style-type: none;
+      display: flex;
+    }
+
+    #navbar li {
+      margin-right: 15px;
+    }
+
+    #navbar a {
+      color: black;
+      text-decoration: none;
+      font-size: 20px;
+      padding: 10px 15px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    #navbar a:hover {
+      color: black;
+      background-color: #49b4a2be;
+    }
+
+    #content {
+      width: 100%;
+      height: calc(100% - 80px);
+      background-color: white;
+      flex-grow: 1;
+      /*overflow: hidden;*/
+    }
+
+    #text2 {
+      line-height: 1.6;
+      margin-left: 60px;
+      margin-right: 600px;
+      font-size: 18;
+    }
+
+    #footer {
+      height: 50px;
+      background-color: #989898;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    #zdjecie1 {
+      float: right;
+      border-radius: 5px;
+      margin-right: 33px;
+      margin-top: 15px;
+      width: 550px;
+      box-shadow: 7px 7px 3px rgba(0, 0, 0, 0.2);
+    }
+
+    #zdjecie2 {
+      float: left;
+      border-radius: 5px;
+      margin-left: 30px;
+      margin-top: -295px;
+      width: 635px;
+      box-shadow: 7px 7px 3px rgba(0, 0, 0, 0.2);
+    }
+
+    #zdjecie3 {
+      float: right;
+      border-radius: 5px;
+      margin-right: 40px;
+      margin-top: -60px;
+      width: 590px;
+      box-shadow: 7px 7px 3px rgba(0, 0, 0, 0.2);
+    }
+
+    #tytul_content {
+      height: 65px;
+      background-color: rgba(0, 0, 0, 0.2);
+      width: 940px;
+      margin-left: 80px;
+      margin-top: 30px;
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #text1 {
+      font-size: 31;
+      font-weight: bold;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    }
+
+    #text_content {
+      height: 60px;
+      background-color: rgba(0, 0, 0, 0.2);
+      width: 500px;
+      margin-left: 80px;
+      margin-top: 55px;
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #text3 {
+      font-size: 28;
+      font-weight: bold;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    }
+
+    #lista {
+      line-height: 1.5;
+      margin-top: 30px;
+      margin-left: 35px;
+      margin-right: 600px;
+      font-size: 18;
+    }
+
+    #lista2 {
+      line-height: 1.5;
+      margin-top: 20px;
+      margin-left: 700px;
+      font-size: 18;
+      float: right;
+    }
+
+    #wady {
+      height: 60px;
+      background-color: rgba(0, 0, 0, 0.2);
+      width: 500px;
+      float: right;
+      /*margin-left: 80px;*/
+      margin-top: 5px;
+      margin-right: 200px;
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #zastosowania {
+      height: 60px;
+      background-color: rgba(0, 0, 0, 0.2);
+      width: 500px;
+      float: left;
+      /*margin-left: 80px;*/
+      margin-top: 35px;
+      margin-left: 50px;
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #lista3 {
+      line-height: 1.5;
+      margin-top: 20px;
+      margin-left: 35px;
+      margin-right: auto;
+      font-size: 18px;
+      float: left;
+      clear: both;
+    }
+  </style>
+
+  <body>
+    <header id="header">
+      <div id="naglowek">
+        <p id="tytul">Grafiki komputerowe</p>
+        <nav id="navbar">
+          <ul>
+            <li><a href="index.html">Strona Głowna</a></li>
+            <li><a href="rastrowa.html">Rastrowa</a></li>
+            <li><a href="wektorowa.html">Wektorowa</a></li>
+            <li><a href="3d.html">3D</a></li>
+            <li><a href="kompedium.html">Kompendium</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div id="content">
+      <div id="tytul_content">
+        <p id="text1">Grafika rastrowa – co to jest?</p>
+      </div>
+      <img src="img/Untitled-3.jpg" alt="zdjecie1" id="zdjecie1" />
+      <p id="text2">
+        <span style="font-weight: bold">Grafika rastrowa (bitmapowa)</span> to
+        rodzaj obrazu komputerowego, który jest przedstawiony jako zbiór
+        pikseli, czyli małych punktów o określonym kolorze. Każdy piksel stanowi
+        najmniejszą jednostkę obrazu i razem tworzą one pełny obraz. Im więcej
+        pikseli w obrazie (wyższa rozdzielczość), tym obraz jest bardziej
+        szczegółowy i wyraźny. Grafika rastrowa jest wykorzystywana głównie do
+        przedstawiania zdjęć, obrazów o skomplikowanej kolorystyce oraz
+        ilustracji z dużą ilością detali.
+      </p>
+      <div id="text_content">
+        <p id="text3">Zalety grafiki rastrowej:</p>
+      </div>
+      <ul id="lista">
+        <li>
+          <span style="font-weight: bold"
+            >Realistyczne odwzorowanie szczegółów:</span
+          >
+          Dzięki dużej liczbie pikseli, grafika rastrowa doskonale odwzorowuje
+          detale, cienie, przejścia tonalne i kolory, co sprawia, że jest
+          idealna do zdjęć i realistycznych obrazów.
+        </li>
+        <li>
+          <span style="font-weight: bold">Powszechność formatów:</span> Obrazy
+          rastrowe są przechowywane w popularnych formatach, takich jak JPG,
+          PNG, GIF, BMP czy TIFF, co zapewnia łatwość w przechowywaniu,
+          edytowaniu i udostępnianiu plików.
+        </li>
+        <li>
+          <span style="font-weight: bold">Łatwość edycji:</span> Pliki rastrowe
+          są kompatybilne z wieloma programami graficznymi, co pozwala na łatwą
+          edycję, retuszowanie i poprawę jakości zdjęć.
+        </li>
+      </ul>
+      <div id="wady">
+        <p id="text3">Wady grafiki rastrowej:</p>
+      </div>
+
+      <ul id="lista2">
+        <li>
+          <span style="font-weight: bold">Utrata jakości przy skalowaniu</span>
+          – powiększanie obrazu powoduje widoczną pikselizację i spadek jakości.
+        </li>
+        <li>
+          <span style="font-weight: bold">Duże rozmiary plików</span> –
+          szczególnie przy wysokiej rozdzielczości, pliki mogą zajmować dużo
+          miejsca.
+        </li>
+        <li>
+          <span style="font-weight: bold">Trudna edycj</span>a – zmiany w
+          obrazie wymagają pracy na pikselach, co utrudnia modyfikacje
+          poszczególnych elementów.
+        </li>
+        <li>
+          <span style="font-weight: bold">Ograniczona precyzja</span> – linie i
+          kształty mogą nie być tak ostre i wyraźne jak w grafice wektorowej.
+        </li>
+        <li>
+          <span style="font-weight: bold">Zależność od rozdzielczości</span> –
+          jakość obrazu zależy od liczby pikseli, co może utrudniać druk w dużym
+          formacie.
+        </li>
+        <li>
+          <span style="font-weight: bold">Brak skalowalności</span> – nie można
+          dowolnie zmieniać rozmiaru bez pogorszenia jakości.
+        </li>
+      </ul>
+      <img
+        src="img/article_pic_grafika_rastrowa_i_wektorowa_czym_sie__ro_z_nia_.png"
+        alt="zdjecie2"
+        id="zdjecie2"
+      />
+      <div id="zastosowania">
+        <p id="text3">Zastosowania grafiki rastrowej:</p>
+      </div>
+      <ul id="lista3">
+        <li>
+          <span style="font-weight: bold">Fotografia cyfrowa</span> –
+          przechowywanie i edycja zdjęć.
+        </li>
+        <li>
+          <span style="font-weight: bold">Grafika komputerowa</span> – tworzenie
+          ilustracji, tekstur i grafik na potrzeby internetu.
+        </li>
+        <li>
+          <span style="font-weight: bold"
+            >Projektowanie stron internetowych</span
+          >
+          – elementy interfejsu, tła, bannery.
+        </li>
+        <li>
+          <span style="font-weight: bold">Gry komputerowe</span> – tekstury,
+          sprite’y, środowiska 2D i 3D.
+        </li>
+        <li>
+          <span style="font-weight: bold">Druk cyfrowy i offsetowy</span> –
+          broszury, katalogi, okładki książek.
+        </li>
+        <li>
+          <span style="font-weight: bold">Filmy i animacje</span> – efekty
+          wizualne, klatki animacji.
+        </li>
+      </ul>
+      <img
+        src="img/procreate-ipad-interface.avif"
+        alt="zdjecie3"
+        id="zdjecie3"
+      />
+    </div>
+    <footer>
+      <div id="footer">By Krzysztof Bratowski</div>
+    </footer>
+  </body>
+</html>

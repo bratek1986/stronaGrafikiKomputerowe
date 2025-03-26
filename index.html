@@ -1,1 +1,182 @@
-<h1>hi</h1>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>grafiki komputerowe</title>
+</head>
+<style>
+  header {
+    position: sticky;
+    top: 0;
+  }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+  }
+
+  #tytul {
+    text-align: left;
+    margin-left: 35px;
+    font-weight: bold;
+    font-size: 30px;
+    color: black;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  }
+
+  #naglowek {
+    height: 80px;
+    background: hsla(226, 29%, 83%, 1);
+      background: linear-gradient(
+        45deg,
+        hsla(226, 29%, 83%, 1) 0%,
+        hsla(229, 100%, 85%, 1) 100%
+      );
+      background: -moz-linear-gradient(
+        45deg,
+        hsla(226, 29%, 83%, 1) 0%,
+        hsla(229, 100%, 85%, 1) 100%
+      );
+      background: -webkit-linear-gradient(
+        45deg,
+        hsla(226, 29%, 83%, 1) 0%,
+        hsla(229, 100%, 85%, 1) 100%
+      );
+      filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#C7CDE0", endColorstr="#B1BFFF", GradientType=1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #navbar {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  #navbar ul {
+    list-style-type: none;
+    display: flex;
+  }
+
+  #navbar li {
+    margin-right: 15px;
+  }
+
+  #navbar a {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  #navbar a:hover {
+    color: black;
+    background-color: #49b4a2be;
+  }
+
+  #content {
+    width: 100%;
+    height: calc(100% - 80px);
+    background-color: white;
+    /*overflow: hidden;*/
+  }
+
+  #text2 {
+    line-height: 1.6;
+    margin-left: 30px;
+    margin-right: 620px;
+    font-size: 18;
+  }
+
+  #footer {
+    height: 50px;
+    background-color: #989898;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+
+  }
+
+  #zdjecie1 {
+    float: right;
+    border-radius: 5px;
+    margin-right: 33px;
+    margin-top: 10px;
+    width: 550px;
+    box-shadow: 7px 7px 3px rgba(0, 0, 0, 0.2);
+  }
+
+  #tytul_content {
+    height: 70px;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 1000px;
+    margin-left: 50px;
+    margin-top: 30px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #text1 {
+    font-size: 31;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  }
+</style>
+
+<body>
+  <header id="header">
+    <div id="naglowek">
+      <p id="tytul">Grafiki komputerowe</p>
+      <nav id="navbar">
+        <ul>
+          <li><a href="index.html">Strona Głowna</a></li>
+          <li><a href="rastrowa.html">Rastrowa</a></li>
+          <li><a href="wektorowa.html">Wektorowa</a></li>
+          <li><a href="3d.html">3D</a></li>
+          <li><a href="kompedium.html">Kompendium</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div id="content">
+    <div id="tytul_content">
+      <p id="text1">Grafika komputerowa – sztuka, technologia i kreatywność</p>
+    </div>
+    <img
+      src="img/fotografia-lub-edytor-graficzny-na-laptopu-biurowego-pracujacego-biurka-kreskowki-plaskiej-ilustraci_101884-764.avif"
+      alt="zdjecie1" id="zdjecie1">
+    <p id="text2">
+      <span style="font-weight: bold;">Grafika komputerowa</span> to niezwykle dynamiczna i wszechstronna dziedzina, która pozwala na tworzenie wizualnych
+      obrazów, animacji oraz efektów w środowisku cyfrowym.
+      Jest to sztuka, która łączy technologię z kreatywnością, dając nieograniczone możliwości twórcze. Wykorzystanie
+      grafiki komputerowej obejmuje szeroki wachlarz
+      branż i dziedzin, od przemysłu rozrywkowego, przez naukę i medycynę, aż po projektowanie, architekturę czy
+      reklamę. Dzięki zaawansowanym narzędziom graficznym możliwe
+      jest nie tylko wierne odwzorowanie rzeczywistości w wirtualnym świecie, ale także tworzenie zupełnie nowych,
+      fantastycznych przestrzeni, które istnieją jedynie w cyfrowym
+      wymiarze.
+      <br>
+      <br>
+      Współczesna grafika komputerowa to efekt połączenia zaawansowanej technologii, matematyki oraz sztuki, dzięki
+      czemu możliwe jest tworzenie wyjątkowo realistycznych obrazów, skomplikowanych animacji i efektów specjalnych,
+      które dawniej były niemożliwe do uzyskania. Wykorzystując grafikę komputerową, możemy zobaczyć rzeczy, które nie
+      istnieją w rzeczywistości, jak na przykład postacie z gier komputerowych, filmów animowanych czy wirtualne światy,
+      a także odkrywać zupełnie nowe wymiary poprzez rozszerzoną i wirtualną rzeczywistość.
+    </p>
+  </div>
+  <footer>
+    <div id="footer">
+      By Krzysztof Bratowski
+    </div>
+  </footer>
+</body>
+
+</html>
