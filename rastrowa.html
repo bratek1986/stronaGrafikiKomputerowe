@@ -5,6 +5,60 @@
     <title>grafiki komputerowe</title>
   </head>
   <style>
+    @media screen and (max-width: 768px) {
+    #naglowek {
+        flex-direction: column; /* Nagłówek w kolumnie */
+        height: auto;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    #tytul {
+        font-size: 24px;
+        margin: 10px 0;
+    }
+
+    #navbar ul {
+        flex-direction: column; /* Menu w pionie */
+        padding: 0;
+    }
+
+    #navbar li {
+        margin: 5px 0;
+    }
+
+    #content {
+        padding: 10px;
+        text-align: center;
+    }
+
+    #text2, #lista, #lista2, #lista3 {
+        margin: 10px auto;
+        max-width: 90%;
+        font-size: 16px;
+    }
+
+    #zdjecie1, #zdjecie2, #zdjecie3 {
+        float: none;
+        display: block;
+        max-width: 90%;
+        height: auto;
+        margin: 20px auto;
+    }
+
+    #tytul_content, #text_content, #wady, #zastosowania {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    #footer {
+        position: relative;
+        height: auto;
+        padding: 10px;
+        text-align: center;
+    }
+}
+
     #header {
       position: sticky;
       top: 0;
