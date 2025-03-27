@@ -8,7 +8,8 @@
 <style>
   header {
     position: sticky;
-    top: 0;
+    top: 5px;
+    opacity: 0.9;
   }
 
   body {
@@ -34,22 +35,16 @@
     border-radius: 10px;
     height: 80px;
     background: hsla(226, 29%, 83%, 1);
-      background: linear-gradient(
-        45deg,
+    background: linear-gradient(45deg,
         hsla(226, 29%, 83%, 1) 0%,
-        hsla(229, 100%, 85%, 1) 100%
-      );
-      background: -moz-linear-gradient(
-        45deg,
+        hsla(229, 100%, 85%, 1) 100%);
+    background: -moz-linear-gradient(45deg,
         hsla(226, 29%, 83%, 1) 0%,
-        hsla(229, 100%, 85%, 1) 100%
-      );
-      background: -webkit-linear-gradient(
-        45deg,
+        hsla(229, 100%, 85%, 1) 100%);
+    background: -webkit-linear-gradient(45deg,
         hsla(226, 29%, 83%, 1) 0%,
-        hsla(229, 100%, 85%, 1) 100%
-      );
-      filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#C7CDE0", endColorstr="#B1BFFF", GradientType=1);
+        hsla(229, 100%, 85%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#C7CDE0", endColorstr="#B1BFFF", GradientType=1);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -98,8 +93,6 @@
   }
 
   #footer {
-    bottom: 0;
-    left: 0;
     width: 100%;
     height: 50px;
     background-color: #989898;
@@ -107,7 +100,9 @@
     align-items: center;
     justify-content: center;
     font-weight: bold;
-    z-index: 1000;
+    border-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
   }
 
   #zdjecie1 {
@@ -155,34 +150,39 @@
   </header>
   <div id="content">
     <div id="tytul_content">
-      <p id="text1">Grafika komputerowa – sztuka, technologia i kreatywność</p>
+      <p id="text1">
+        Grafika komputerowa – sztuka, technologia i kreatywność
+      </p>
     </div>
     <img
       src="img/fotografia-lub-edytor-graficzny-na-laptopu-biurowego-pracujacego-biurka-kreskowki-plaskiej-ilustraci_101884-764.avif"
-      alt="zdjecie1" id="zdjecie1">
+      alt="zdjecie1" id="zdjecie1" />
     <p id="text2">
-      <span style="font-weight: bold;">Grafika komputerowa</span> to niezwykle dynamiczna i wszechstronna dziedzina, która pozwala na tworzenie wizualnych
-      obrazów, animacji oraz efektów w środowisku cyfrowym.
-      Jest to sztuka, która łączy technologię z kreatywnością, dając nieograniczone możliwości twórcze. Wykorzystanie
-      grafiki komputerowej obejmuje szeroki wachlarz
-      branż i dziedzin, od przemysłu rozrywkowego, przez naukę i medycynę, aż po projektowanie, architekturę czy
-      reklamę. Dzięki zaawansowanym narzędziom graficznym możliwe
-      jest nie tylko wierne odwzorowanie rzeczywistości w wirtualnym świecie, ale także tworzenie zupełnie nowych,
-      fantastycznych przestrzeni, które istnieją jedynie w cyfrowym
-      wymiarze.
-      <br>
-      <br>
-      Współczesna grafika komputerowa to efekt połączenia zaawansowanej technologii, matematyki oraz sztuki, dzięki
-      czemu możliwe jest tworzenie wyjątkowo realistycznych obrazów, skomplikowanych animacji i efektów specjalnych,
-      które dawniej były niemożliwe do uzyskania. Wykorzystując grafikę komputerową, możemy zobaczyć rzeczy, które nie
-      istnieją w rzeczywistości, jak na przykład postacie z gier komputerowych, filmów animowanych czy wirtualne światy,
-      a także odkrywać zupełnie nowe wymiary poprzez rozszerzoną i wirtualną rzeczywistość.
+      <span style="font-weight: bold">Grafika komputerowa</span> to niezwykle
+      dynamiczna i wszechstronna dziedzina, która pozwala na tworzenie
+      wizualnych obrazów, animacji oraz efektów w środowisku cyfrowym. Jest to
+      sztuka, która łączy technologię z kreatywnością, dając nieograniczone
+      możliwości twórcze. Wykorzystanie grafiki komputerowej obejmuje szeroki
+      wachlarz branż i dziedzin, od przemysłu rozrywkowego, przez naukę i
+      medycynę, aż po projektowanie, architekturę czy reklamę. Dzięki
+      zaawansowanym narzędziom graficznym możliwe jest nie tylko wierne
+      odwzorowanie rzeczywistości w wirtualnym świecie, ale także tworzenie
+      zupełnie nowych, fantastycznych przestrzeni, które istnieją jedynie w
+      cyfrowym wymiarze.
+      <br />
+      <br />
+      Współczesna grafika komputerowa to efekt połączenia zaawansowanej
+      technologii, matematyki oraz sztuki, dzięki czemu możliwe jest tworzenie
+      wyjątkowo realistycznych obrazów, skomplikowanych animacji i efektów
+      specjalnych, które dawniej były niemożliwe do uzyskania. Wykorzystując
+      grafikę komputerową, możemy zobaczyć rzeczy, które nie istnieją w
+      rzeczywistości, jak na przykład postacie z gier komputerowych, filmów
+      animowanych czy wirtualne światy, a także odkrywać zupełnie nowe wymiary
+      poprzez rozszerzoną i wirtualną rzeczywistość.
     </p>
   </div>
   <footer>
-    <div id="footer">
-      By Krzysztof Bratowski
-    </div>
+    <div id="footer">By Krzysztof Bratowski</div>
   </footer>
 </body>
 
