@@ -1,126 +1,258 @@
 <html lang="pl">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>grafiki komputerowe</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>grafiki komputerowe</title>
 </head>
 <style>
-  header {
-    position: sticky;
-    top: 5px;
-    opacity: 0.9;
+    header {
+        position: sticky;
+        top: 5px;
+        opacity: 0.9;
+        z-index: 100;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0px;
+        padding: 0px;
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        min-height: 100vh;
+        box-sizing: border-box;
+    }
+
+    #tytul {
+        text-align: left;
+        margin-left: 35px;
+        font-weight: bold;
+        font-size: 30px;
+        color: black;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    #naglowek {
+        border-radius: 10px;
+        height: 80px;
+        background: hsla(226, 29%, 83%, 1);
+        background: linear-gradient(45deg,
+                hsla(226, 29%, 83%, 1) 0%,
+                hsla(229, 100%, 85%, 1) 100%);
+        background: -moz-linear-gradient(45deg,
+                hsla(226, 29%, 83%, 1) 0%,
+                hsla(229, 100%, 85%, 1) 100%);
+        background: -webkit-linear-gradient(45deg,
+                hsla(226, 29%, 83%, 1) 0%,
+                hsla(229, 100%, 85%, 1) 100%);
+        filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#C7CDE0", endColorstr="#B1BFFF", GradientType=1);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    #navbar {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    #navbar ul {
+        list-style-type: none;
+        display: flex;
+        padding: 0;
+        margin: 0;
+    }
+
+    #navbar li {
+        margin-right: 15px;
+    }
+
+    #navbar a {
+        color: black;
+        text-decoration: none;
+        font-size: 20px;
+        padding: 10px 15px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        display: block;
+    }
+
+    #navbar a:hover {
+        color: black;
+        background-color: #49b4a2be;
+    }
+
+    #content {
+        width: 100%;
+        background-color: white;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    #footer {
+        width: 100%;
+        height: 50px;
+        background-color: #989898;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        border-radius: 10px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        left: 0;
+        opacity: 0.9;
+        box-sizing: border-box;
+    }
+
+    #tytul_content {
+      height: 65px;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 940px;
+    margin: 30px auto;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 65px;
   }
 
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0px;
-    padding: 0px;
-    height: 100%;
-    margin-top: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-
-  #tytul {
-    text-align: left;
-    margin-left: 35px;
+  #text1 {
+    font-size: 27px;
     font-weight: bold;
-    font-size: 30px;
-    color: black;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
   }
-
-  #naglowek {
-    border-radius: 10px;
-    height: 80px;
-    background: hsla(226, 29%, 83%, 1);
-    background: linear-gradient(45deg,
-        hsla(226, 29%, 83%, 1) 0%,
-        hsla(229, 100%, 85%, 1) 100%);
-    background: -moz-linear-gradient(45deg,
-        hsla(226, 29%, 83%, 1) 0%,
-        hsla(229, 100%, 85%, 1) 100%);
-    background: -webkit-linear-gradient(45deg,
-        hsla(226, 29%, 83%, 1) 0%,
-        hsla(229, 100%, 85%, 1) 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#C7CDE0", endColorstr="#B1BFFF", GradientType=1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  #navbar {
-    display: flex;
-    justify-content: flex-start;
-  }
-
-  #navbar ul {
-    list-style-type: none;
-    display: flex;
-  }
-
-  #navbar li {
-    margin-right: 15px;
-  }
-
-  #navbar a {
-    color: black;
-    text-decoration: none;
-    font-size: 20px;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-
-  #navbar a:hover {
-    color: black;
-    background-color: #49b4a2be;
-  }
-
-  #content {
-    width: 100%;
-    height: calc(100% - 80px);
-    background-color: white;
-    /*overflow: hidden;*/
-  }
-
-  #footer {
-    width: 100%;
-    height: 50px;
-    background-color: #989898;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    border-radius: 10px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-  }
-
 </style>
 
 <body>
-  <header id="header">
-    <div id="naglowek">
-      <p id="tytul">Grafiki komputerowe</p>
-      <nav id="navbar">
+    <header id="header">
+        <div id="naglowek">
+            <p id="tytul">Grafiki komputerowe</p>
+            <nav id="navbar">
+                <ul>
+                    <li><a href="index.html">Strona Głowna</a></li>
+                    <li><a href="rastrowa.html">Rastrowa</a></li>
+                    <li><a href="wektorowa.html">Wektorowa</a></li>
+                    <li><a href="3d.html">3D</a></li>
+                    <li><a href="kompedium.html">Kompendium</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div id="content">
+      <div id="tytul_content">
+        <p id="text1">Kompendium Grafik komputerowych</p>
+      </div>
+
+        <h2>Grafika Rastrowa (Bitmapowa)</h2>
+        <p>Grafika rastrowa to obraz cyfrowy składający się z siatki pikseli (małych kolorowych punktów). Każdy piksel zawiera informację o kolorze.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 15px;">
+            <div>
+                <img src="img/50196.jpg" alt="Przykład grafiki rastrowej 1" style="max-width: 300px; height: auto; border: 1px solid #ccc;">
+                <p style="font-size: small; text-align: center;">Przykład zdjęcia rastrowego</p>
+            </div>
+            <div>
+                <img src="img/PPC-37.jpg" alt="Przykład grafiki rastrowej 2" style="max-width: 450px; height: auto; border: 1px solid #ccc;">
+                <p style="font-size: small; text-align: center;">Powiększenie grafiki rastrowej ukazujące piksele</p>
+            </div>
+        </div>
+        <h3>Zalety:</h3>
         <ul>
-          <li><a href="index.html">Strona Głowna</a></li>
-          <li><a href="rastrowa.html">Rastrowa</a></li>
-          <li><a href="wektorowa.html">Wektorowa</a></li>
-          <li><a href="3d.html">3D</a></li>
-          <li><a href="kompedium.html">Kompendium</a></li>
+            <li>Realistyczne odwzorowanie szczegółów.</li>
+            <li>Powszechność formatów (JPG, PNG, GIF, BMP, TIFF).</li>
+            <li>Łatwość edycji zdjęć.</li>
         </ul>
-      </nav>
+        <h3>Wady:</h3>
+        <ul>
+            <li>Utrata jakości przy powiększaniu (pikselizacja).</li>
+            <li>Duże rozmiary plików.</li>
+            <li>Trudna edycja pojedynczych elementów.</li>
+        </ul>
+        <h3>Zastosowania:</h3>
+        <ul>
+            <li>Zdjęcia cyfrowe.</li>
+            <li>Grafiki internetowe (złożone obrazy).</li>
+            <li>Tekstury w grach.</li>
+            <li>Druk cyfrowy.</li>
+        </ul>
+
+        <h2>Grafika Wektorowa</h2>
+        <p>Grafika wektorowa to obraz cyfrowy opisany za pomocą obiektów matematycznych (punkty, linie, krzywe, kształty) zdefiniowanych przez współrzędne i atrybuty (kolor, grubość).</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 15px;">
+            <div>
+                <img src="img/v914-ning-19a.svg" alt="Przykład grafiki wektorowej 1" style="max-width: 300px; height: auto; border: 1px solid #ccc;">
+                <p style="font-size: small; text-align: center;">Przykład logo w formacie wektorowym</p>
+            </div>
+            <div>
+                <img src="img/8392209.svg" alt="Przykład grafiki wektorowej 2" style="max-width: 300px; height: auto; border: 1px solid #ccc;">
+                <p style="font-size: small; text-align: center;">Ilustracja wektorowa z możliwością nieskończonego powiększania</p>
+            </div>
+            <div>
+                <img src="img/steptodown.com6221002.jpg" alt="Przykład grafiki wektorowej 3" style="max-width: 300px; height: auto; border: 1px solid #ccc;">
+                <p style="font-size: small; text-align: center;">Schemat techniczny w grafice wektorowej</p>
+            </div>
+        </div>
+        <h3>Zalety:</h3>
+        <ul>
+            <li>Nieskończona skalowalność bez utraty jakości.</li>
+            <li>Małe rozmiary plików (zazwyczaj).</li>
+            <li>Łatwa edycja obiektów.</li>
+            <li>Idealna do druku i grawerowania.</li>
+        </ul>
+        <h3>Wady:</h3>
+        <ul>
+            <li>Ograniczona szczegółowość (trudno o fotorealizm).</li>
+            <li>Nieodpowiednia do zdjęć.</li>
+            <li>Złożoność przy bardzo skomplikowanych ilustracjach.</li>
+        </ul>
+        <h3>Zastosowania:</h3>
+        <ul>
+            <li>Logo.</li>
+            <li>Ikony.</li>
+            <li>Ilustracje.</li>
+            <li>Infografiki.</li>
+            <li>Grafika internetowa (proste elementy).</li>
+            <li>Materiały do druku.</li>
+        </ul>
+
+        <h2>Grafika Trójwymiarowa (3D)</h2>
+        <p>Grafika 3D to technika tworzenia obrazów i obiektów w przestrzeni trójwymiarowej (posiadających wysokość, szerokość i głębokość) za pomocą modeli.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 15px;">
+            <div>
+                <img src="img/wizualizacje-3d-budynku-mieszkalnego9.webp" alt="Przykład grafiki 3D 1" style="max-width: 300px; height: auto; border: 1px solid #ccc;">
+                <p style="font-size: small; text-align: center;">Wizualizacja architektoniczna 3D</p>
+            </div>
+            <div>
+                <img src="img/obrobka-skanu-3d-w-programie-zbrush.webp" alt="Przykład grafiki 3D 2" style="max-width: 300px; height: auto; border: 1px solid #ccc;">
+                <p style="font-size: small; text-align: center;">Model postaci 3D z gry komputerowej</p>
+            </div>
+        </div>
+        <h3>Zalety:</h3>
+        <ul>
+            <li>Wysoki realizm.</li>
+            <li>Przestrzenność.</li>
+            <li>Skalowalność modeli.</li>
+            <li>Wszechstronne zastosowania (gry, filmy, architektura).</li>
+        </ul>
+        <h3>Wady:</h3>
+        <ul>
+            <li>Czasochłonność tworzenia.</li>
+            <li>Wysokie wymagania sprzętowe.</li>
+            <li>Trudność w nauce oprogramowania.</li>
+        </ul>
+        <h3>Zastosowania:</h3>
+        <ul>
+            <li>Modelowanie 3D.</li>
+            <li>Animacja 3D.</li>
+            <li>Efekty specjalne.</li>
+            <li>Gry komputerowe.</li>
+            <li>Wizualizacje architektoniczne.</li>
+        </ul>
     </div>
-  </header>
-  <div id="content">
-    
-  </div>
-  <footer>
-    <div id="footer">By Krzysztof Bratowski</div>
-  </footer>
+    <footer>
+        <div id="footer">By Krzysztof Bratowski</div>
+    </footer>
 </body>
 
 </html>

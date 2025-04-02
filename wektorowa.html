@@ -12,13 +12,14 @@
     }
 
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      margin: 0px;
-      padding: 0px;
-      height: 215%;
-      margin-top: 10px;
-      margin-left: 10px;
-      margin-right: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0px;
+        padding: 0px;
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        min-height: 100vh;
+        box-sizing: border-box;
     }
 
     #tytul {
@@ -85,10 +86,10 @@
     }
 
     #content {
-      width: 100%;
-      height: calc(100% - 80px);
-      background-color: white;
-      /*overflow: hidden;*/
+        width: 100%;
+        background-color: white;
+        padding: 20px;
+        box-sizing: border-box;
     }
 
     #text2 {
@@ -99,16 +100,19 @@
     }
 
     #footer {
-      width: 100%;
-      height: 50px;
-      background-color: #989898;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      border-radius: 10px;
-      border-bottom-left-radius: 0px;
-      border-bottom-right-radius: 0px;
+        width: 100%;
+        height: 50px;
+        background-color: #989898;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        border-radius: 10px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        left: 0;
+        opacity: 0.9;
+        box-sizing: border-box;
     }
 
     #zdjecie1 {
@@ -123,19 +127,21 @@
     #zdjecie2 {
       float: left;
       border-radius: 5px;
-      margin-left: 150px;
-      margin-top: -282px;
-      width: 415px;
+      margin-left: 110px;
+      margin-top: -355px;
+      width: 28%;
       box-shadow: 7px 7px 3px rgba(0, 0, 0, 0.2);
     }
 
     #zdjecie3 {
-      display: block;
-      border-radius: 5px;
-      margin: 40px auto;
-      width: 590px;
-      box-shadow: 7px 7px 3px rgba(0, 0, 0, 0.2);
-    }
+  display: block;
+  border-radius: 5px;
+  margin: 40px auto;
+  width: 35%;
+  box-shadow: 7px 7px 3px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
 
     #tytul_content {
       height: 65px;
@@ -188,6 +194,7 @@
       font-size: 18;
       float: right;
       clear: both;
+      margin-bottom: 20px;
     }
 
     #wady {
@@ -227,6 +234,7 @@
       font-size: 18px;
       float: left;
       clear: both;
+      margin-bottom: 20px;
     }
   </style>
 
