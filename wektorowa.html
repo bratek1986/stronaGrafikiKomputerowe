@@ -1,382 +1,371 @@
 <html lang="pl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>grafiki komputerowe</title>
-  </head>
-  <style>
-    #header {
-      position: sticky;
-      top: 5px;
-      opacity: 0.9;
-    }
 
-    body {
-        font-family: Arial, Helvetica, sans-serif;
-        margin: 0px;
-        padding: 0px;
-        margin-top: 10px;
-        margin-left: 10px;
-        margin-right: 10px;
-        min-height: 100vh;
-        box-sizing: border-box;
-    }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>grafiki komputerowe</title>
+</head>
+<style>
+  #header {
+    position: sticky;
+    top: 5px;
+    opacity: 0.9;
+  }
 
-    #tytul {
-      text-align: left;
-      margin-left: 35px;
-      font-weight: bold;
-      font-size: 30px;
-      color: black;
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    }
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    min-height: 100vh;
+    box-sizing: border-box;
+  }
 
-    #naglowek {
-      border-radius: 10px;
-      height: 80px;
-      /*background-color: #c5c5e2;*/
-      background: hsla(226, 29%, 83%, 1);
-      background: linear-gradient(
-        45deg,
+  #tytul {
+    text-align: left;
+    margin-left: 35px;
+    font-weight: bold;
+    font-size: 30px;
+    color: black;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  }
+
+  #naglowek {
+    border-radius: 10px;
+    height: 80px;
+    /*background-color: #c5c5e2;*/
+    background: hsla(226, 29%, 83%, 1);
+    background: linear-gradient(45deg,
         hsla(226, 29%, 83%, 1) 0%,
-        hsla(229, 100%, 85%, 1) 100%
-      );
-      background: -moz-linear-gradient(
-        45deg,
+        hsla(229, 100%, 85%, 1) 100%);
+    background: -moz-linear-gradient(45deg,
         hsla(226, 29%, 83%, 1) 0%,
-        hsla(229, 100%, 85%, 1) 100%
-      );
-      background: -webkit-linear-gradient(
-        45deg,
+        hsla(229, 100%, 85%, 1) 100%);
+    background: -webkit-linear-gradient(45deg,
         hsla(226, 29%, 83%, 1) 0%,
-        hsla(229, 100%, 85%, 1) 100%
-      );
-      filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#C7CDE0", endColorstr="#B1BFFF", GradientType=1);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+        hsla(229, 100%, 85%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#C7CDE0", endColorstr="#B1BFFF", GradientType=1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-    #navbar {
-      display: flex;
-      justify-content: flex-start;
-    }
+  #navbar {
+    display: flex;
+    justify-content: flex-start;
+  }
 
-    #navbar ul {
-      list-style-type: none;
-      display: flex;
-    }
+  #navbar ul {
+    list-style-type: none;
+    display: flex;
+  }
 
-    #navbar li {
-      margin-right: 15px;
-    }
+  #navbar li {
+    margin-right: 15px;
+  }
 
-    #navbar a {
-      color: black;
-      text-decoration: none;
-      font-size: 20px;
-      padding: 10px 15px;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
-    }
+  #navbar a {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
 
-    #navbar a:hover {
-      color: black;
-      background-color: #49b4a2be;
-    }
+  #navbar a:hover {
+    color: black;
+    background-color: #49b4a2be;
+  }
 
-    #content {
-        width: 100%;
-        background-color: white;
-        padding: 20px;
-        box-sizing: border-box;
-    }
+  #content {
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    box-sizing: border-box;
+  }
 
-    #text2 {
-      line-height: 1.6;
-      margin-left: 60px;
-      margin-right: 600px;
-      font-size: 18;
-    }
+  #text2 {
+    line-height: 1.6;
+    margin-left: 60px;
+    margin-right: 600px;
+    font-size: 18;
+  }
 
-    #footer {
-        width: 100%;
-        height: 50px;
-        background-color: #989898;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: bold;
-        border-radius: 10px;
-        border-bottom-left-radius: 0px;
-        border-bottom-right-radius: 0px;
-        left: 0;
-        opacity: 0.9;
-        box-sizing: border-box;
-    }
+  #footer {
+    width: 100%;
+    height: 50px;
+    background-color: #989898;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    left: 0;
+    opacity: 0.9;
+    box-sizing: border-box;
+  }
 
-    #zdjecie1 {
-      float: right;
-      border-radius: 5px;
-      margin-right: 33px;
-      margin-top: 15px;
-      width: 550px;
-      box-shadow: 7px 7px 3px rgba(0, 0, 0, 0.2);
-    }
+  #zdjecie1 {
+    float: right;
+    border-radius: 5px;
+    margin-right: 33px;
+    margin-top: 15px;
+    width: 550px;
+    box-shadow: 7px 7px 3px rgba(0, 0, 0, 0.2);
+  }
 
-    #zdjecie2 {
-      float: left;
-      border-radius: 5px;
-      margin-left: 110px;
-      margin-top: -355px;
-      width: 28%;
-      box-shadow: 7px 7px 3px rgba(0, 0, 0, 0.2);
-    }
+  #zdjecie2 {
+    float: left;
+    border-radius: 5px;
+    margin-left: 110px;
+    margin-top: -355px;
+    width: 28%;
+    box-shadow: 7px 7px 3px rgba(0, 0, 0, 0.2);
+  }
 
-    #zdjecie3 {
-  display: block;
-  border-radius: 5px;
-  margin: 40px auto;
-  width: 35%;
-  box-shadow: 7px 7px 3px rgba(0, 0, 0, 0.2);
-  margin-bottom: 20px;
-}
+  #zdjecie3 {
+    display: block;
+    border-radius: 5px;
+    margin: 40px auto;
+    width: 35%;
+    box-shadow: 7px 7px 3px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+  }
 
 
-    #tytul_content {
-      height: 65px;
-      background-color: rgba(0, 0, 0, 0.2);
-      width: 940px;
-      margin-left: 80px;
-      margin-top: 30px;
-      border-radius: 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+  #tytul_content {
+    height: 65px;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 940px;
+    margin-left: 80px;
+    margin-top: 30px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-    #text1 {
-      font-size: 31;
-      font-weight: bold;
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-    }
+  #text1 {
+    font-size: 31;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  }
 
-    #text_content {
-      height: 60px;
-      background-color: rgba(0, 0, 0, 0.2);
-      width: 500px;
-      margin-left: 80px;
-      margin-top: 60px;
-      border-radius: 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+  #text_content {
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 500px;
+    margin-left: 80px;
+    margin-top: 60px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-    #text3 {
-      font-size: 28;
-      font-weight: bold;
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-    }
+  #text3 {
+    font-size: 28;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  }
 
-    #lista {
-      line-height: 1.5;
-      margin-top: 30px;
-      margin-left: 35px;
-      margin-right: 600px;
-      font-size: 18;
-    }
+  #lista {
+    line-height: 1.5;
+    margin-top: 30px;
+    margin-left: 35px;
+    margin-right: 600px;
+    font-size: 18;
+  }
 
-    #lista2 {
-      line-height: 1.5;
-      margin-top: 20px;
-      margin-left: 600px;
-      font-size: 18;
-      float: right;
-      clear: both;
-      margin-bottom: 20px;
-    }
+  #lista2 {
+    line-height: 1.5;
+    margin-top: 20px;
+    margin-left: 600px;
+    font-size: 18;
+    float: right;
+    clear: both;
+    margin-bottom: 20px;
+  }
 
-    #wady {
-      height: 60px;
-      background-color: rgba(0, 0, 0, 0.2);
-      width: 500px;
-      float: right;
-      /*margin-left: 80px;*/
-      margin-top: 15px;
-      margin-right: 320px;
-      border-radius: 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+  #wady {
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 500px;
+    float: right;
+    /*margin-left: 80px;*/
+    margin-top: 15px;
+    margin-right: 320px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-    #zastosowania {
-      height: 60px;
-      background-color: rgba(0, 0, 0, 0.2);
-      width: 500px;
-      float: left;
-      /*margin-left: 80px;*/
-      margin-top: 45px;
-      margin-left: 60px;
-      border-radius: 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      clear: both;
-    }
+  #zastosowania {
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 500px;
+    float: left;
+    /*margin-left: 80px;*/
+    margin-top: 45px;
+    margin-left: 60px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clear: both;
+  }
 
-    #lista3 {
-      line-height: 1.5;
-      margin-top: 20px;
-      margin-left: 45px;
-      margin-right: auto;
-      font-size: 18px;
-      float: left;
-      clear: both;
-      margin-bottom: 20px;
-    }
-  </style>
+  #lista3 {
+    line-height: 1.5;
+    margin-top: 20px;
+    margin-left: 45px;
+    margin-right: auto;
+    font-size: 18px;
+    float: left;
+    clear: both;
+    margin-bottom: 20px;
+  }
+</style>
 
-  <body>
-    <header id="header">
-      <div id="naglowek">
-        <p id="tytul">Grafiki komputerowe</p>
-        <nav id="navbar">
-          <ul>
-            <li><a href="index.html">Strona Głowna</a></li>
-            <li><a href="rastrowa.html">Rastrowa</a></li>
-            <li><a href="wektorowa.html">Wektorowa</a></li>
-            <li><a href="3d.html">3D</a></li>
-            <li><a href="kompedium.html">Kompendium</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <div id="content">
-      <div id="tytul_content">
-        <p id="text1">Grafika wektorowa – co to jest?</p>
-      </div>
-      <img src="img/Untitled-2.jpg" alt="zdjecie1" id="zdjecie1" />
-      <p id="text2">
-        <span style="font-weight: bold">Grafika wektorowa</span> to rodzaj
-        grafiki komputerowej, w której obrazy są tworzone za pomocą obiektów
-        matematycznych, takich jak punkty, linie, krzywe i kształty. Każdy
-        element obrazu jest definiowany za pomocą współrzędnych oraz właściwości
-        (np. koloru, grubości linii), co pozwala na dowolne skalowanie bez
-        utraty jakości.
-        <br />
-        <br />
-        Dzięki temu grafika wektorowa jest idealna do projektowania logo, ikon,
-        ilustracji, czcionek oraz schematów technicznych. Pliki wektorowe często
-        zapisuje się w formatach SVG, AI, EPS, PDF, CDR, a do ich edycji używa
-        się programów takich jak Adobe Illustrator, CorelDRAW, Inkscape.
-      </p>
-      <div id="text_content">
-        <p id="text3">Zalety grafiki wektorowej:</p>
-      </div>
-      <ul id="lista">
-        <li>
-          <span style="font-weight: bold">Skalowalnoś</span>ć – obrazy można
-          dowolnie powiększać i pomniejszać bez utraty jakości.
-        </li>
-        <li>
-          <span style="font-weight: bold">Lekkość plikó</span>w – w porównaniu
-          do grafiki rastrowej, pliki są mniejsze, zwłaszcza w przypadku
-          prostych kształtów.
-        </li>
-        <li>
-          <span style="font-weight: bold">Łatwa edycja</span> – można
-          modyfikować poszczególne elementy obrazu bez wpływu na całość.
-        </li>
-        <li>
-          <span style="font-weight: bold">Idealna do druku i grawerowania</span>
-          – zachowuje jakość niezależnie od rozdzielczości.
-        </li>
-        <li>
-          <span style="font-weight: bold">Precyzyjne krawędzie</span> – świetnie
-          nadaje się do grafiki technicznej, schematów, ikon i logo.
-        </li>
-        <li>
-          <span style="font-weight: bold">Możliwość konwersji na grafikę rastrową</span> – można 
-          łatwo zapisać w formatach PNG, JPG w dowolnej rozdzielczości.
-        </li>
-      </ul>
-      <div id="wady">
-        <p id="text3">Wady grafiki wektorowej:</p>
-      </div>
-
-      <ul id="lista2">
-        <li>
-          <span style="font-weight: bold">Ograniczona szczegółowość</span> –
-          trudności w odwzorowaniu skomplikowanych tekstur i detali.
-        </li>
-        <li>
-          <span style="font-weight: bold">Nieodpowiednia do fotografii</span> –
-          nie nadaje się do realistycznych obrazów i zdjęć.
-        </li>
-        <li>
-          <span style="font-weight: bold">Złożoność przy skomplikowanych kształtach</span> – bardzo 
-          skomplikowane ilustracje mogą zwiększać rozmiar pliku i
-          obciążenie systemu.
-        </li>
-        <li>
-          <span style="font-weight: bold">Ograniczone efekty cieniowania</span> – 
-          trudności w uzyskaniu realistycznych przejść tonalnych i efektów
-          świetlnych.
-        </li>
-        <li>
-          <span style="font-weight: bold">Problemy z kompatybilnością</span> –
-          nie wszystkie programy obsługują zaawansowane formaty wektorowe.
-        </li>
-        <li>
-          <span style="font-weight: bold">Wymaga specjalistycznego oprogramowania</span> – edycja 
-          i tworzenie grafiki wektorowej wymaga znajomości programów
-          takich jak Adobe Illustrator czy CorelDRAW.
-        </li>
-      </ul>
-      <img
-        src="img/vector-graphics-editor-design-program-digital-art-software_681307-46.avif"
-        alt="zdjecie2"
-        id="zdjecie2"
-      />
-      <div id="zastosowania">
-        <p id="text3">Zastosowania grafiki wektorowej:</p>
-      </div>
-      <ul id="lista3">
-        <li>
-          <span style="font-weight: bold">Logo i identyfikacja wizualna</span> –
-          projektowanie logotypów, ikon i znaków firmowych.
-        </li>
-        <li>
-          <span style="font-weight: bold">Ilustracje i infografiki</span> –
-          tworzenie schematów, wykresów i ilustracji o wysokiej jakości.
-        </li>
-        <li>
-          <span style="font-weight: bold">Projektowanie stron internetowych</span>– ikony, 
-          elementy interfejsu, wektorowe ilustracje.
-        </li>
-        <li>
-          <span style="font-weight: bold">Druk i poligrafia</span> – plakaty,
-          wizytówki, ulotki i inne materiały promocyjne.
-        </li>
-        <li>
-          <span style="font-weight: bold">Animacje i multimedia</span> –
-          elementy grafiki ruchomej w filmach animowanych i reklamach.
-        </li>
-        <li>
-          <span style="font-weight: bold">Grawerowanie i cięcie laserowe</span>
-          – precyzyjne projekty do zastosowań w reklamie i przemyśle.
-        </li>
-      </ul>
-      <img
-        src="img/001-understand-yourself-large-opt.png"
-        alt="zdjecie3"
-        id="zdjecie3"
-      />
+<body>
+  <header id="header">
+    <div id="naglowek">
+      <p id="tytul">Grafiki komputerowe</p>
+      <nav id="navbar">
+        <ul>
+          <li><a href="index.html">Strona Głowna</a></li>
+          <li><a href="rastrowa.html">Rastrowa</a></li>
+          <li><a href="wektorowa.html">Wektorowa</a></li>
+          <li><a href="3d.html">3D</a></li>
+          <li><a href="kompedium.html">Kompendium</a></li>
+        </ul>
+      </nav>
     </div>
-    <footer>
-      <div id="footer">By Krzysztof Bratowski</div>
-    </footer>
-  </body>
+  </header>
+  <div id="content">
+    <div id="tytul_content">
+      <p id="text1">Grafika wektorowa – co to jest?</p>
+    </div>
+    <img src="img/Untitled-2.jpg" alt="zdjecie1" id="zdjecie1" />
+    <p id="text2">
+      <span style="font-weight: bold">Grafika wektorowa</span> to rodzaj
+      grafiki komputerowej, w której obrazy są tworzone za pomocą obiektów
+      matematycznych, takich jak punkty, linie, krzywe i kształty. Każdy
+      element obrazu jest definiowany za pomocą współrzędnych oraz właściwości
+      (np. koloru, grubości linii), co pozwala na dowolne skalowanie bez
+      utraty jakości.
+      <br />
+      <br />
+      Dzięki temu grafika wektorowa jest idealna do projektowania logo, ikon,
+      ilustracji, czcionek oraz schematów technicznych. Pliki wektorowe często
+      zapisuje się w formatach SVG, AI, EPS, PDF, CDR, a do ich edycji używa
+      się programów takich jak Adobe Illustrator, CorelDRAW, Inkscape.
+    </p>
+    <div id="text_content">
+      <p id="text3">Zalety grafiki wektorowej:</p>
+    </div>
+    <ul id="lista">
+      <li>
+        <span style="font-weight: bold">Skalowalnoś</span>ć – obrazy można
+        dowolnie powiększać i pomniejszać bez utraty jakości.
+      </li>
+      <li>
+        <span style="font-weight: bold">Lekkość plikó</span>w – w porównaniu
+        do grafiki rastrowej, pliki są mniejsze, zwłaszcza w przypadku
+        prostych kształtów.
+      </li>
+      <li>
+        <span style="font-weight: bold">Łatwa edycja</span> – można
+        modyfikować poszczególne elementy obrazu bez wpływu na całość.
+      </li>
+      <li>
+        <span style="font-weight: bold">Idealna do druku i grawerowania</span>
+        – zachowuje jakość niezależnie od rozdzielczości.
+      </li>
+      <li>
+        <span style="font-weight: bold">Precyzyjne krawędzie</span> – świetnie
+        nadaje się do grafiki technicznej, schematów, ikon i logo.
+      </li>
+      <li>
+        <span style="font-weight: bold">Możliwość konwersji na grafikę rastrową</span> – można
+        łatwo zapisać w formatach PNG, JPG w dowolnej rozdzielczości.
+      </li>
+    </ul>
+    <div id="wady">
+      <p id="text3">Wady grafiki wektorowej:</p>
+    </div>
+
+    <ul id="lista2">
+      <li>
+        <span style="font-weight: bold">Ograniczona szczegółowość</span> –
+        trudności w odwzorowaniu skomplikowanych tekstur i detali.
+      </li>
+      <li>
+        <span style="font-weight: bold">Nieodpowiednia do fotografii</span> –
+        nie nadaje się do realistycznych obrazów i zdjęć.
+      </li>
+      <li>
+        <span style="font-weight: bold">Złożoność przy skomplikowanych kształtach</span> – bardzo
+        skomplikowane ilustracje mogą zwiększać rozmiar pliku i
+        obciążenie systemu.
+      </li>
+      <li>
+        <span style="font-weight: bold">Ograniczone efekty cieniowania</span> –
+        trudności w uzyskaniu realistycznych przejść tonalnych i efektów
+        świetlnych.
+      </li>
+      <li>
+        <span style="font-weight: bold">Problemy z kompatybilnością</span> –
+        nie wszystkie programy obsługują zaawansowane formaty wektorowe.
+      </li>
+      <li>
+        <span style="font-weight: bold">Wymaga specjalistycznego oprogramowania</span> – edycja
+        i tworzenie grafiki wektorowej wymaga znajomości programów
+        takich jak Adobe Illustrator czy CorelDRAW.
+      </li>
+    </ul>
+    <img src="img/vector-graphics-editor-design-program-digital-art-software_681307-46.avif" alt="zdjecie2"
+      id="zdjecie2" />
+    <div id="zastosowania">
+      <p id="text3">Zastosowania grafiki wektorowej:</p>
+    </div>
+    <ul id="lista3">
+      <li>
+        <span style="font-weight: bold">Logo i identyfikacja wizualna</span> –
+        projektowanie logotypów, ikon i znaków firmowych.
+      </li>
+      <li>
+        <span style="font-weight: bold">Ilustracje i infografiki</span> –
+        tworzenie schematów, wykresów i ilustracji o wysokiej jakości.
+      </li>
+      <li>
+        <span style="font-weight: bold">Projektowanie stron internetowych</span>– ikony,
+        elementy interfejsu, wektorowe ilustracje.
+      </li>
+      <li>
+        <span style="font-weight: bold">Druk i poligrafia</span> – plakaty,
+        wizytówki, ulotki i inne materiały promocyjne.
+      </li>
+      <li>
+        <span style="font-weight: bold">Animacje i multimedia</span> –
+        elementy grafiki ruchomej w filmach animowanych i reklamach.
+      </li>
+      <li>
+        <span style="font-weight: bold">Grawerowanie i cięcie laserowe</span>
+        – precyzyjne projekty do zastosowań w reklamie i przemyśle.
+      </li>
+    </ul>
+    <img src="img/001-understand-yourself-large-opt.png" alt="zdjecie3" id="zdjecie3" />
+  </div>
+  <footer>
+    <div id="footer">By Krzysztof Bratowski</div>
+  </footer>
+</body>
+
 </html>
