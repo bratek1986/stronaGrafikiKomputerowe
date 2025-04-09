@@ -40,13 +40,6 @@
         background: linear-gradient(45deg,
                 hsla(226, 29%, 83%, 1) 0%,
                 hsla(229, 100%, 85%, 1) 100%);
-        background: -moz-linear-gradient(45deg,
-                hsla(226, 29%, 83%, 1) 0%,
-                hsla(229, 100%, 85%, 1) 100%);
-        background: -webkit-linear-gradient(45deg,
-                hsla(226, 29%, 83%, 1) 0%,
-                hsla(229, 100%, 85%, 1) 100%);
-        filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#C7CDE0", endColorstr="#B1BFFF", GradientType=1);
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -121,6 +114,46 @@
         font-weight: bold;
         text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
     }
+
+    .img-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+
+    .img-container div {
+        text-align: center;
+    }
+
+    .img-container img {
+        max-width: 325px;
+        height: auto;
+        border: 1px solid #ccc;
+    }
+
+    .img-container p {
+        font-size: small;
+        text-align: center;
+    }
+
+    .bold-text {
+        font-weight: bold;
+        color: #2a2929;
+    }
+
+    .background-gray {
+        background-color: #e0e0e0;
+        padding: 15px;
+        border-radius: 15px;
+        max-width: 250px;
+    }
+
+    .background-gray img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
 </style>
 
 <body>
@@ -143,142 +176,170 @@
             <p id="text1">Kompendium Grafik komputerowych</p>
         </div>
 
-        <h2>Grafika Rastrowa (Bitmapowa)</h2>
+        <h2>Podstawowe zagadnienia w grafice komputerowej</h2>
         <p>
-            Grafika rastrowa to obraz cyfrowy składający się z siatki pikseli
-            (małych kolorowych punktów). Każdy piksel zawiera informację o kolorze.
+            <span class="bold-text">Grafika komputerowa</span> to dziedzina
+            zajmująca się tworzeniem, przetwarzaniem i przechowywaniem obrazów za
+            pomocą komputerów. Jest szeroko stosowana w wielu dziedzinach, takich
+            jak projektowanie, multimedia, animacja czy wizualizacja 3D.
         </p>
-        <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 15px">
-            <div>
-                <img src="img/50196.jpg" alt="Przykład grafiki rastrowej 1"
-                    style="max-width: 300px; height: auto; border: 1px solid #ccc" />
-                <p style="font-size: small; text-align: center">
-                    Przykład zdjęcia rastrowego
-                </p>
-            </div>
-            <div>
-                <img src="img/PPC-37.jpg" alt="Przykład grafiki rastrowej 2"
-                    style="max-width: 450px; height: auto; border: 1px solid #ccc" />
-                <p style="font-size: small; text-align: center">
-                    Powiększenie grafiki rastrowej ukazujące piksele
-                </p>
-            </div>
-        </div>
-        <h3>Zalety:</h3>
-        <ul>
-            <li>Realistyczne odwzorowanie szczegółów.</li>
-            <li>Powszechność formatów (JPG, PNG, GIF, BMP, TIFF).</li>
-            <li>Łatwość edycji zdjęć.</li>
-        </ul>
-        <h3>Wady:</h3>
-        <ul>
-            <li>Utrata jakości przy powiększaniu (pikselizacja).</li>
-            <li>Duże rozmiary plików.</li>
-            <li>Trudna edycja pojedynczych elementów.</li>
-        </ul>
-        <h3>Zastosowania:</h3>
-        <ul>
-            <li>Zdjęcia cyfrowe.</li>
-            <li>Grafiki internetowe (złożone obrazy).</li>
-            <li>Tekstury w grach.</li>
-            <li>Druk cyfrowy.</li>
-        </ul>
 
-        <h2>Grafika Wektorowa</h2>
+        <h2>Rozdzielczości</h2>
         <p>
-            Grafika wektorowa to obraz cyfrowy opisany za pomocą obiektów
-            matematycznych (punkty, linie, krzywe, kształty) zdefiniowanych przez
-            współrzędne i atrybuty (kolor, grubość).
+            <span class="bold-text">Rozdzielczość obrazu</span> to liczba pikseli w
+            obrazie, zwykle podawana w formie szerokości × wysokości (np. 1920 ×
+            1080). Im wyższa rozdzielczość, tym więcej szczegółów jest widocznych w
+            obrazie.
         </p>
-        <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 15px">
+        <h3>Typowe rozdzielczości:</h3>
+        <ul>
+            <li><span class="bold-text">HD (720p):</span> 1280 × 720 px</li>
+            <li><span class="bold-text">Full HD (1080p):</span> 1920 × 1080 px</li>
+            <li><span class="bold-text">Ultra HD (4K):</span> 3840 × 2160 px</li>
+            <li><span class="bold-text">8K:</span> 7680 × 4320 px</li>
+        </ul>
+        <div class="img-container">
             <div>
-                <img src="img/v914-ning-19a.svg" alt="Przykład grafiki wektorowej 1"
-                    style="max-width: 300px; height: auto; border: 1px solid #ccc" />
-                <p style="font-size: small; text-align: center">
-                    Przykład logo w formacie wektorowym
-                </p>
+                <img src="img/rozdzielczosc1.png" alt="Przykład rozdzielczości HD" />
+                <p>Przykład rozdzielczości HD</p>
             </div>
             <div>
-                <img src="img/8392209.svg" alt="Przykład grafiki wektorowej 2"
-                    style="max-width: 300px; height: auto; border: 1px solid #ccc" />
-                <p style="font-size: small; text-align: center">
-                    Ilustracja wektorowa z możliwością nieskończonego powiększania
-                </p>
-            </div>
-            <div>
-                <img src="img/steptodown.com6221002.jpg" alt="Przykład grafiki wektorowej 3"
-                    style="max-width: 300px; height: auto; border: 1px solid #ccc" />
-                <p style="font-size: small; text-align: center">
-                    Schemat techniczny w grafice wektorowej
-                </p>
+                <img src="img/rozdzielczosc2.png" alt="Przykład rozdzielczości 4K" />
+                <p>Przykład rozdzielczości 4K</p>
             </div>
         </div>
-        <h3>Zalety:</h3>
-        <ul>
-            <li>Nieskończona skalowalność bez utraty jakości.</li>
-            <li>Małe rozmiary plików (zazwyczaj).</li>
-            <li>Łatwa edycja obiektów.</li>
-            <li>Idealna do druku i grawerowania.</li>
-        </ul>
-        <h3>Wady:</h3>
-        <ul>
-            <li>Ograniczona szczegółowość (trudno o fotorealizm).</li>
-            <li>Nieodpowiednia do zdjęć.</li>
-            <li>Złożoność przy bardzo skomplikowanych ilustracjach.</li>
-        </ul>
-        <h3>Zastosowania:</h3>
-        <ul>
-            <li>Logo.</li>
-            <li>Ikony.</li>
-            <li>Ilustracje.</li>
-            <li>Infografiki.</li>
-            <li>Grafika internetowa (proste elementy).</li>
-            <li>Materiały do druku.</li>
-        </ul>
 
-        <h2>Grafika Trójwymiarowa (3D)</h2>
+        <h2>Palety kolorów</h2>
         <p>
-            Grafika 3D to technika tworzenia obrazów i obiektów w przestrzeni
-            trójwymiarowej (posiadających wysokość, szerokość i głębokość) za pomocą
-            modeli.
+            <span class="bold-text">Paleta kolorów</span> to zbiór kolorów używanych
+            w projekcie graficznym. Istnieje wiele palet, które są standardowe w
+            grafice komputerowej, takie jak paleta RGB, CMYK czy HSL.
         </p>
-        <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 15px">
+        <h3>Typowe palety:</h3>
+        <ul>
+            <li>
+                <span class="bold-text">RGB (Red, Green, Blue)</span> – stosowana w
+                monitorach, telewizorach.
+            </li>
+            <li>
+                <span class="bold-text">CMYK (Cyan, Magenta, Yellow, Key/Black)</span>
+                – stosowana w druku.
+            </li>
+            <li>
+                <span class="bold-text">HSL (Hue, Saturation, Lightness)</span> –
+                bardziej naturalna reprezentacja kolorów.
+            </li>
+        </ul>
+        <div class="img-container">
             <div>
-                <img src="img/wizualizacje-3d-budynku-mieszkalnego9.webp" alt="Przykład grafiki 3D 1"
-                    style="max-width: 300px; height: auto; border: 1px solid #ccc" />
-                <p style="font-size: small; text-align: center">
-                    Wizualizacja architektoniczna 3D
-                </p>
+                <img src="img/RGBColourModel.png" alt="Paleta kolorów RGB" />
+                <p>Paleta kolorów RGB</p>
             </div>
             <div>
-                <img src="img/obrobka-skanu-3d-w-programie-zbrush.webp" alt="Przykład grafiki 3D 2"
-                    style="max-width: 300px; height: auto; border: 1px solid #ccc" />
-                <p style="font-size: small; text-align: center">
-                    Model postaci 3D z gry komputerowej
-                </p>
+                <img src="img/CMYKColourModel.png" alt="Przykład palety kolorów CMYK" />
+                <p>Przykład palety RGB w grafice</p>
             </div>
         </div>
-        <h3>Zalety:</h3>
+
+        <h2>Głębie kolorów</h2>
+        <p>
+            <span class="bold-text">Głębia koloru</span> to liczba bitów używanych
+            do reprezentowania koloru każdego piksela w obrazie. Im większa głębia,
+            tym więcej kolorów można wyświetlić.
+        </p>
+        <h3>Typowe głębie kolorów:</h3>
         <ul>
-            <li>Wysoki realizm.</li>
-            <li>Przestrzenność.</li>
-            <li>Skalowalność modeli.</li>
-            <li>Wszechstronne zastosowania (gry, filmy, architektura).</li>
+            <li><span class="bold-text">8-bit:</span> 256 kolorów.</li>
+            <li><span class="bold-text">16-bit:</span> 65,536 kolorów.</li>
+            <li>
+                <span class="bold-text">24-bit (True Color):</span> 16,777,216
+                kolorów.
+            </li>
+            <li>
+                <span class="bold-text">32-bit:</span> zawiera kanał alfa
+                (przezroczystość).
+            </li>
         </ul>
-        <h3>Wady:</h3>
+        <div class="img-container">
+            <div>
+                <img src="img/Colour-Depth-Comparison copy.webp" alt="Przykład głębi kolorów 24-bit" />
+                <p>Głębia kolorów 24-bit</p>
+            </div>
+            <div>
+                <img src="img/rtaImage.png" alt="Przykład głębi kolorów 8-bit" />
+                <p>Głębia kolorów 8-bit</p>
+            </div>
+        </div>
+
+        <h2>Proporcje ekranu</h2>
+        <p>
+            <span class="bold-text">Proporcje ekranu</span> to stosunek szerokości
+            do wysokości ekranu, na którym wyświetlany jest obraz. Typowe proporcje
+            to:
+        </p>
         <ul>
-            <li>Czasochłonność tworzenia.</li>
-            <li>Wysokie wymagania sprzętowe.</li>
-            <li>Trudność w nauce oprogramowania.</li>
+            <li>
+                <span class="bold-text">4:3</span> – starsze telewizory i monitory.
+            </li>
+            <li>
+                <span class="bold-text">16:9</span> – standard w nowoczesnych
+                telewizorach i monitorach.
+            </li>
+            <li>
+                <span class="bold-text">21:9</span> – ultrapanoramiczne monitory.
+            </li>
         </ul>
-        <h3>Zastosowania:</h3>
+        <div class="img-container">
+            <div>
+                <img src="img/id_Composition_in_Photography_08_Aspect_16x9.jpg" alt="Proporcje ekranu 16:9" />
+                <p>Proporcje ekranu 16:9</p>
+            </div>
+            <div>
+                <img src="img/id_Composition_in_Photography_07_Aspect_4x3.jpg" alt="Proporcje ekranu 4:3" />
+                <p>Proporcje ekranu 4:3</p>
+            </div>
+        </div>
+
+        <h2>Kompilacje plików</h2>
+        <p>
+            <span class="bold-text">Kompilacja pliku graficznego</span> to proces
+            zapisywania obrazu w odpowiednim formacie, który najlepiej odpowiada
+            jego przeznaczeniu. W zależności od zastosowania, wybiera się różne
+            formaty plików graficznych.
+        </p>
+        <h3>Typowe formaty plików:</h3>
         <ul>
-            <li>Modelowanie 3D.</li>
-            <li>Animacja 3D.</li>
-            <li>Efekty specjalne.</li>
-            <li>Gry komputerowe.</li>
-            <li>Wizualizacje architektoniczne.</li>
+            <li>
+                <span class="bold-text">JPEG (JPG)</span> – popularny format do zdjęć,
+                kompresja stratna.
+            </li>
+            <li>
+                <span class="bold-text">PNG</span> – format z przezroczystością,
+                kompresja bezstratna.
+            </li>
+            <li>
+                <span class="bold-text">GIF</span> – format animacji, kompresja
+                bezstratna.
+            </li>
+            <li>
+                <span class="bold-text">SVG</span> – format wektorowy, używany do
+                grafiki skalowalnej.
+            </li>
+            <li>
+                <span class="bold-text">TIFF</span> – format bezstratny, używany w
+                profesjonalnym druku.
+            </li>
         </ul>
+        <div class="img-container">
+            <div class="background-gray">
+                <img src="img/google.png" alt="Format JPG" />
+                <p>Format JPG</p>
+            </div>
+            <div class="background-gray">
+                <img src="img/google2.jpg" alt="Format PNG" />
+                <p>Format PNG</p>
+            </div>
+        </div>
     </div>
     <footer>
         <div id="footer">By Krzysztof Bratowski</div>
